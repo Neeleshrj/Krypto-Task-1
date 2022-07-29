@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 
@@ -8,7 +9,9 @@ export default function Product({ data }) {
     <div className="product-container">
       <div className="product-box">
         <div>
-          <img src={data.image} className="product-img" />
+          <NavLink to={`/products/${data.id}`}>
+            <img src={data.image} className="product-img" />
+          </NavLink>
           <div className="product-info-box">
             <div className="product-text-box">
               <p className="product-text">{data.title}</p>

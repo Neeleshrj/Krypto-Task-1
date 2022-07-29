@@ -6,18 +6,19 @@ import NavBar from "./components/NavBar";
 //pages
 import Auth from "./pages/Auth";
 import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/HomePage/Product";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <HomePage />
+
       {/* <Auth /> */}
-      {/* <Routes>
-        <Route path="/">
-          
-        </Route>
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/auth" element={<Auth />}/>
+        <Route path="/products/:id" element={<ProductPage />} />
+      </Routes>
     </Router>
   );
 }

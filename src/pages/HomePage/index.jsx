@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+//components
 import Product from "../../components/Product";
 
 import "./home.css";
 
 export default function HomePage(){
     const [data, setData] = useState(null);
+
     const getData = () => {
         axios.get("http://127.0.0.1:5000/products").then((res) => {
             setData(res.data);
