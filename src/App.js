@@ -8,17 +8,25 @@ import Auth from "./pages/Auth";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/HomePage/Product";
 
+import { useAuthContext } from "./Context/AuthContextManager";
+
 function App() {
+  const { isLoggedIn } = useAuthContext();
+
   return (
     <Router>
       <NavBar />
-
+      {!isLoggedIn ? (
+        <Routes>
+          <Route path="/" element={<Auth />} />
+        </Routes>
+      ) : (
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products/:id" element={<ProductPage />} />
+        </Routes>
+      )}
       {/* <Auth /> */}
-      <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/auth" element={<Auth />}/>
-        <Route path="/products/:id" element={<ProductPage />} />
-      </Routes>
     </Router>
   );
 }

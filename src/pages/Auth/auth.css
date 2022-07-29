@@ -39,7 +39,8 @@
 }
 
 .create-account-text{
-    color: #0078EC  
+    color: #0078EC;
+    cursor: pointer;
 }
 
 .login-button-container{
@@ -57,5 +58,5 @@
     border: none;
     font-size: 1rem;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-    
+    cursor: pointer;
 }

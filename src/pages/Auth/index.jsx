@@ -3,6 +3,8 @@ import InputContainer from "../../components/InputContainer";
 
 import "./auth.css";
 
+import { useAuthContext } from "../../Context/AuthContextManager";
+
 export default function Auth() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -10,11 +12,11 @@ export default function Auth() {
   const [lastName, setLastName] = useState("");
   const [tab, setTab] = useState("login");
 
+  const { register, login } = useAuthContext();
+
   const switchTab = () => {
-    if(tab === "login")
-        setTab("register")
-    if(tab === "register")
-        setTab("login")
+    if (tab === "login") setTab("register");
+    if (tab === "register") setTab("login");
   };
 
   return (
@@ -74,12 +76,23 @@ export default function Auth() {
         </div>
         <div className="login-button-container">
           <div className="create-account-text-container">
-            <p className="create-account-text" onClick={() =>  switchTab()}>
-              {tab === "login" ? "New User? Create an account" : "Already Registered? Login"}
+            <p className="create-account-text" onClick={() => switchTab()}>
+              {tab === "login"
+                ? "New User? Create an account"
+                : "Already Registered? Login"}
             </p>
           </div>
           <div className="login-button-container">
-            <button className="login-button">{tab === "login" ? "Login" : "Register"}</button>
+            <button
+              className="login-button"
+              onClick={() => {
+                tab === "login"
+                  ? login(email, pass)
+                  : register(email, pass, firstName, lastName);
+              }}
+            >
+              {tab === "login" ? "Login" : "Register"}
+            </button>
           </div>
         </div>
       </div>
