@@ -1,0 +1,35 @@
+.navbar-container{
+    background-color: #0478ED;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.logo-text-container{
+    flex: 3;
+}
+.nav-links{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.logo-text{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 2%;
+}
+
+.link-text{
+    color: #fff;
+    padding-left:5%;
+    padding-right:5%;
+    margin: 0;
+    margin-top: 10px;
+}

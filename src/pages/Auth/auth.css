@@ -1,0 +1,61 @@
+.auth-root-container{
+    flex: 1;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box-container{
+    background-color: #fff;
+    height: 40%;
+    width: 22%;
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    /* position: absolute; */
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+
+.login-text-container{
+    width: 100%;
+}
+
+.login-text{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10%;
+}
+
+.login-button-container{
+    display: flex;
+}
+
+.create-account-text-container{
+    flex: 1;
+}
+
+.create-account-text{
+    color: #0078EC  
+}
+
+.login-button-container{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button{
+    color: #fff;
+    background-color: #0078EC;
+    border-radius: 24px;
+    width: 70%;
+    padding: 6% 12% 6% 12%;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    
+}

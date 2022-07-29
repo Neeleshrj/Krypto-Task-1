@@ -1,8 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+//components
+import NavBar from "./components/NavBar";
+
+//pages
+import Auth from "./pages/Auth";
+
 function App() {
   return (
-    <div>
-      <h1>Let's Go</h1>
-    </div>
+    <Router>
+      <NavBar />
+      <Auth />
+      {/* <Routes>
+        <Route path="/">
+          
+        </Route>
+      </Routes> */}
+    </Router>
   );
 }
 

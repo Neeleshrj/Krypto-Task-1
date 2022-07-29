@@ -1,0 +1,32 @@
+.input-container-root{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F1F5F9;
+    border-radius: 24px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 6%;
+    width: 100%;
+    align-items: center;
+}
+
+.input-box{
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    margin-left: 6%;
+}
+
+.pass-icon{
+    font-size: 16px;
+    margin-right: 6%;
+}
+
+.input-box:focus {
+    outline: none;
+  }
+  .input-box::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+  
