@@ -7,8 +7,37 @@
     width: 20%;
     text-align: center;
     cursor: pointer;
+    border: solid black 2px;
 }
 .button-text{
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    .button-body{
+        width: 25%;
+    }
+    .button-text{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-body{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .button-text{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .button-body{
+        width: 40%;
+    }
 }

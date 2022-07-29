@@ -61,6 +61,10 @@
     cursor: pointer;
 }
 
+.action-buttons:hover{
+    color: #0478ED;
+}
+
 @media screen and (max-width: 1190px) {
     .product-text-box{
         min-height: 80px;

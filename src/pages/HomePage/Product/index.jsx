@@ -8,8 +8,19 @@ import "./productpage.css";
 import PrimaryButton from "../../../components/Buttons/PrimaryButton";
 import SecondaryButton from "../../../components/Buttons/SecondaryButton";
 
+//context
+import { useCartContext } from "../../../Context/CartContextManager";
+
 export default function ProductPage() {
   const [data, setData] = useState(null);
+  const { cart, setCart } = useCartContext();
+
+  const addItem = () => {
+    let items = [...cart];
+    console.log(items)
+    items.push(data);
+    setCart(items);
+  };
 
   useEffect(() => {
     axios
@@ -42,7 +53,12 @@ export default function ProductPage() {
           </div>
           <div className="button-container">
             <SecondaryButton text="Buy Now" color="#000" textColor="#000" />
-            <PrimaryButton text="Add to Basket" color="#000" textColor="#fff" />
+            <PrimaryButton
+              text="Add to Basket"
+              color="#000"
+              textColor="#fff"
+              onClick={() => addItem()}
+            />
           </div>
         </div>
       </div>

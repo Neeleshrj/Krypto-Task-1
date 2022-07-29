@@ -36,7 +36,7 @@ export default function NavBar() {
             fontSize: "1.5rem",
             color: "#0A376D",
             margin: 0,
-            marginTop: "5.5%",
+            marginTop: "5%",
           }}
         >
           <HiShoppingCart />

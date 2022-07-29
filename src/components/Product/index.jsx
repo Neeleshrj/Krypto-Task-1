@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { MdOutlineAddShoppingCart, MdDone} from "react-icons/md";
 
 import axios from "axios";
 
@@ -15,6 +15,7 @@ export default function Product({ data }) {
   const { userId } = useAuthContext();
   const [ isFavourite, setIsFavourite] = useState(false)
   const [changed, setChanged] = useState(false);
+  const [itemAdded, setItemAdded] = useState(false)
 
   const change = () => {
     setChanged((prev) => !prev);
@@ -66,6 +67,7 @@ export default function Product({ data }) {
     
   };
 
+
   useEffect(() => {
     checkFavourite(data.id)
   }, [changed]);
@@ -97,11 +99,19 @@ export default function Product({ data }) {
                   onClick={() => addToFavourite(data.id)}
                 />
               )}
-
-              <MdOutlineAddShoppingCart
+              {itemAdded ? (
+                <MdDone
                 className="action-buttons"
-                onClick={() => addItem()}
               />
+              ): (
+                <MdOutlineAddShoppingCart
+                className="action-buttons"
+                onClick={() => {addItem();setItemAdded(true);setTimeout(()=> {
+                  setItemAdded(false)
+                },5000)}}
+              />
+              )}
+              
             </div>
           </div>
         </div>
