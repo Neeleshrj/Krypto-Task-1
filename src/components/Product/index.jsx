@@ -4,7 +4,17 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 import "./product.css";
 
+import { useCartContext } from "../../Context/CartContextManager";
+
 export default function Product({ data }) {
+  const {cart, setCart} = useCartContext();
+
+  const addItem = () => {
+    let items = [...cart]
+    items.push(data)
+    setCart(items)
+  }
+
   return (
     <div className="product-container">
       <div className="product-box">
@@ -22,7 +32,7 @@ export default function Product({ data }) {
             </div>
             <div className="action-buttons-container">
               <AiOutlineHeart className="action-buttons" />
-              <MdOutlineAddShoppingCart className="action-buttons" />
+              <MdOutlineAddShoppingCart className="action-buttons" onClick={() => addItem()}/>
             </div>
           </div>
         </div>

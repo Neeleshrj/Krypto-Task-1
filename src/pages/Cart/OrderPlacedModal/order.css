@@ -1,0 +1,28 @@
+.modal-container{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+.modal-content-container{
+    background-color: #fff;
+    height: 40%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.order-placed-logo{
+    color: #40A145;
+    font-size: 10rem;
+}
+.order-placed-large-text{
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 600;
+}

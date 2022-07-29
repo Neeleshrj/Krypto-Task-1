@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import Auth from "./pages/Auth";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/HomePage/Product";
+import Cart from "./pages/Cart";
 
 import { useAuthContext } from "./Context/AuthContextManager";
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products/:id" element={<ProductPage />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       )}
       {/* <Auth /> */}

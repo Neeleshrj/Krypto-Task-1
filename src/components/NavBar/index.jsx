@@ -25,17 +25,22 @@ export default function NavBar() {
             <p className="link-text">Login</p>
           </NavLink>
         ) : (
-          <p className="link-text" onClick={() => logout()}>Logout</p>
+          <p className="link-text" onClick={() => logout()}>
+            Logout
+          </p>
         )}
-        <HiShoppingCart
+        <NavLink
+          to="/cart"
+          className="nav-link"
           style={{
             fontSize: "1.5rem",
             color: "#0A376D",
             margin: 0,
             marginTop: "5.5%",
           }}
-        />
-        <p className="link-text"></p>
+        >
+          <HiShoppingCart />
+        </NavLink>
       </div>
     </div>
   );

@@ -47,10 +47,13 @@ export default function AuthContextProvider({ children }) {
   useEffect(() => {
     try {
       const res = localStorage.getItem("token");
+      const user = localStorage.getItem("id");
+      const token =  localStorage.getItem("token");
       console.log(res);
       if (res !== null) {
         setIsLoggedIn(true);
-
+        setUserId(user)
+        setAuthToken(token)
       }
     } catch (e) {
       console.log(e);

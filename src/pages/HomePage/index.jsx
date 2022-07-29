@@ -23,7 +23,7 @@ export default function HomePage(){
         return(
             <div className="home-root-container">
                 {data.map((obj,i)=> (
-                    <Product data={obj} />
+                    <Product data={obj} key={obj.id}/>
                 ))}
             </div>
         )

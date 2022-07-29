@@ -6,6 +6,7 @@
     padding-bottom: 0.8%;
     width: 20%;
     text-align: center;
+    cursor: pointer;
 }
 .button-text{
     font-size: 1.3rem;

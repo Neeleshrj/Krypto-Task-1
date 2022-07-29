@@ -6,12 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 
 //contexts
 import AuthContextProvider from "./Context/AuthContextManager";
+import CartContextProvider from "./Context/CartContextManager";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <App />
+      <CartContextProvider>
+        <App />
+      </CartContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );
