@@ -5,12 +5,14 @@ import NavBar from "./components/NavBar";
 
 //pages
 import Auth from "./pages/Auth";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <Auth />
+      <HomePage />
+      {/* <Auth /> */}
       {/* <Routes>
         <Route path="/">
           
