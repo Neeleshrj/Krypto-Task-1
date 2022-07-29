@@ -41,7 +41,6 @@
 
 .rating{
     font-size: 0.8rem;
-    
     color: #fff;
 }
 
@@ -60,4 +59,31 @@
 .action-buttons{
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1190px) {
+    .product-text-box{
+        min-height: 80px;
+    }
+    .product-rating-container{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .product-container{
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .product-container{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .product-container{
+        width: 80%;
+    }
 }

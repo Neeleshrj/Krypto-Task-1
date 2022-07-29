@@ -60,3 +60,30 @@
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
     cursor: pointer;
 }
+
+@media screen and (max-width: 1190px) {
+    .auth-box-container{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auth-box-container{
+        width: 50%;
+        padding: 4%;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .auth-box-container{
+        width: 60%;
+        padding: 6%;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .auth-box-container{
+        width: 80%;
+        padding: 6%;
+    }
+}
